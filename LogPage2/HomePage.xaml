@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogPage2.HomePage"
+             Shell.BackgroundColor="#0F3460"
+             Title="HomePage"
+             Shell.FlyoutBehavior="Flyout">
+    <Grid BackgroundColor="#24425a">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Margin="10" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" FontSize="26" Text="Başarı Mobile" TextColor="#76BA99" />
+
+
+
+
+            <Image  Grid.Row="0" Grid.Column="3" Source="user.png" Margin="0,5,10,0" HeightRequest="35" WidthRequest="35" VerticalOptions="Start" HorizontalOptions="End"/>
+
+        </Grid>
+
+
+
+        <StackLayout Margin="20,50,20,20">
+            <Image Margin="0,30,0,0" Source="logo.png" HeightRequest="200" WidthRequest="150" HorizontalOptions="Center"/>
+
+            <StackLayout Margin="25,20">
+                <Label HorizontalOptions="Center" FontSize="16" Text="Başarı Mobile Bilişim Ürünleri ve Hizmetleri A.Ş. Türkiye'de Mobil Eğlence sektörü için kurulan ilk firmadır. Başarı Holding bünyesinde, 1998 yılında Bilişim Teknolojileri ve Mobil İnternet Servisleri departmanlarının birleşmesi ile hizmet vermeye başlamıştır. Başarı Mobile, 2003 yılından bu yana mobil ortamlarda katma değerli servisler ve bilişim teknolojileri alanlarında faaliyetlerini sürdürmektedir." 
+                       TextColor="#F2D388"/>
+
+            </StackLayout>
+            <StackLayout>
+                <Button Margin="0,20" BackgroundColor="White" WidthRequest="150"
+                    Text="Go to Web Page" TextColor="#24425a" FontFamily="OpenSansBold" Clicked="BrowserOpen_Clicked" />
+
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LogPage2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LogPage2"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="White">
+
+    <FlyoutItem  Icon="log_out.png" Title="Log out ">
+        <ShellContent FlyoutItemIsVisible="False" 
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <ShellItem Icon="home.png" Title="Home Page" Route="HomePage">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
+    </ShellItem>
+</Shell>

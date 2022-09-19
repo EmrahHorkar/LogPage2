@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogPage2.MainPage"
+             Shell.FlyoutBehavior="Disabled">
+
+    <Grid BackgroundColor="#24425a">
+
+        <StackLayout Margin="20">
+            <Image x:Name="Logo" Margin="0,30,0,0" Source="logo.png" HeightRequest="200" WidthRequest="150" HorizontalOptions="Center"/>
+
+            <StackLayout Margin="0,20,0,20">
+                <Label  HorizontalOptions="Center" FontSize="32" Text="Başarı Mobile" TextColor="#94B3FD"/>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,10,0,0">
+                <Label FontFamily="OpenSansRegular" TextColor="White" 
+                       FontSize="16" Text="E-mail"/>
+                <Grid Margin="0,8">
+                    <Frame Opacity="0.3" BackgroundColor="#90AACB" CornerRadius="10"/>
+                    <Entry x:Name="Email" BackgroundColor="#90AACB" Placeholder="Enter E-mail"  
+                           TextColor="#181818" Margin="5,3"
+                           PlaceholderColor="#4C0033" />
+
+                </Grid>
+
+                <Label Margin="0,10,0,0" FontFamily="OpenSansRegular" TextColor="White" 
+                       FontSize="16" Text="Password"/>
+                <Grid Margin="0,5">
+                    <Frame Opacity="0.3" BackgroundColor="#90AACB" CornerRadius="10"/>
+                    <Entry x:Name="Password" BackgroundColor="#90AACB" Placeholder="Enter password" 
+                           TextColor="#181818" Margin="5,3"
+                           PlaceholderColor="#4C0033" IsPassword="True"/>
+
+                </Grid>
+            </StackLayout>
+
+            <Button Margin="0,20" BackgroundColor="White" WidthRequest="150"
+                    Text="LOGIN" TextColor="#24425a" FontFamily="OpenSansBold" Clicked="Button_Clicked"/>
+
+            <Button Margin="0,0" BackgroundColor="#24425a" WidthRequest="330"
+                    Text="Forgot Password?" TextColor="#FFCB42"  FontFamily="OpenSansBold" Clicked="ForgotClicked" FontSize="16"/>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>
