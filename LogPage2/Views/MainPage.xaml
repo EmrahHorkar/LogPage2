@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:DXMauiApp1.Views"
+       xmlns:effects="clr-namespace:DXMauiApp1.Effects"
+       effects:InitializeEffectsEffect.Init="true"
+       Shell.ItemTemplate="{StaticResource ShellMenuItemTemplate}"
+       Shell.MenuItemTemplate="{StaticResource ShellMenuItemTemplate}"
+       xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+       ios:Page.UseSafeArea="true"
+       x:Class="DXMauiApp1.Views.MainPage">
+    <MenuItem Text="Close" IconImageSource="close" Clicked="OnCloseClicked"/>
+    
+    <ShellContent Title="Log out" Icon="logout"
+                  ContentTemplate="{DataTemplate local:LoginPage}" />
+    <ShellContent Title="About Başarı Mobile" Icon="about"
+                  ContentTemplate="{DataTemplate local:AboutPage} " 
+                  Route="AboutPage"/>
+    <ShellContent Title="Başarı Mobile Products" Icon="browse"
+                  ContentTemplate="{DataTemplate local:ItemsPage}"  IsVisible="True"/>
+   
+    
+    <ShellContent Title="Scheduler" Icon="scheduler"
+                  ContentTemplate="{DataTemplate local:SchedulerPage}" IsVisible="False"/>
+    <ShellContent Title="Companies of Başarı Holding" Icon="charts"
+                  ContentTemplate="{DataTemplate local:DataGridPage}" IsVisible="True"/>
+    <ShellContent Title="Charts" Icon="charts"
+                  ContentTemplate="{DataTemplate local:ChartsPage}" IsVisible="False"/>
+    <ShellContent Title="Popup" Icon="popup"
+                  ContentTemplate="{DataTemplate local:PopupPage}" IsVisible="False"/>
+
+    
+
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
+    </TabBar>    
+</Shell>

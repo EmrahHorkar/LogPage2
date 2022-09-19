@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:templates="clr-namespace:DXMauiApp1.Views.Templates"
+             Title="Companies"
+             Shell.BackgroundColor="#24425a"
+             IconImageSource="browse"
+             BackgroundColor="#24425a"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="DXMauiApp1.Views.DataGridPage">
+    <ContentPage.Content >
+        
+        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Items}" >
+            <dxg:DataGridView.Columns>
+                <dxg:TextColumn FieldName="Text" Caption="Company Name" FontColor="#472D2D" FontSize="15" FontAttributes="Bold"/>
+                <dxg:TextColumn FieldName="Description" Caption="Adress"  FontColor="#24425a"/>
+                <dxg:TextColumn FieldName="Phone" Caption="Phone" FontColor="Orange"/>
+            </dxg:DataGridView.Columns>
+        </dxg:DataGridView>
+    </ContentPage.Content>
+</ContentPage>

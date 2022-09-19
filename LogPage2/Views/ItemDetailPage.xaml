@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:DXMauiApp1.Views.Templates"
+             Title="Product"
+             BackgroundColor="{StaticResource NormalBackgroundColor}"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             Shell.BackgroundColor="#5CB8E4"
+             x:Class="DXMauiApp1.Views.ItemDetailPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#24425a" Spacing="5" Padding="15">
+            <Label Text="Product Name:" FontFamily="Roboto" FontSize="14" TextColor="#76BA99"/>
+            <Label Text="{Binding Product}" FontFamily="Roboto" FontSize="24" TextColor="#F2D388" Margin="0, 0, 0, 10"/>
+            <Label Text="Product Description:" FontFamily="Roboto" FontSize="14" TextColor="#76BA99" />
+            <Label Text="{Binding Productdescription}" FontFamily="Roboto" FontSize="14" TextColor="#F2D388"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
